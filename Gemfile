@@ -1,6 +1,7 @@
 source :rubygems
 
 gem "rest-client", "~> 1.6.1"
+gem "yajl-ruby", "~> 0.8.1"
 
 group :development do
   gem "bundler", "~> 1.0.0"
