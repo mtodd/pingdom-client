@@ -1,7 +1,9 @@
 source :rubygems
 
-gem "rest-client", "~> 1.6.1"
-gem "yajl-ruby", "~> 0.8.1"
+gem "faraday", "~> 0.5.6"
+
+gem "excon", "~> 0.5.5"
+gem "yajl-ruby", "~> 0.8.1", :require => "yajl"
 
 group :development do
   gem "bundler", "~> 1.0.0"
