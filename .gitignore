@@ -2,3 +2,4 @@
 .bundle
 credentials.yml
 NOTES.md
+*.gem
