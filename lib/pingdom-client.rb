@@ -387,6 +387,8 @@ module Pingdom
         monitored + unmonitored
       end
       
+      attributes :avgresponse => :response_time
+      
     end
     
     # {"status"=>{"totalup"=>5035757, "totalunknown"=>1293069551, "totaldown"=>5078}}
