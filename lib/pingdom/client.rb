@@ -60,7 +60,7 @@ module Pingdom
       Check.parse(self, get("checks", options))
     end
     def check(id)
-      Check.parse(self, get("checks/#{id}"))
+      Check.parse(self, get("checks/#{id}")).first
     end
     
     # Check ID
