@@ -365,6 +365,7 @@ module Pingdom
       def starttime
         Time.at(@attributes[:starttime])
       end
+      alias_method :start_at, :starttime
       
       def endtime
         starttime + INTERVALS[interval.to_s].to_i
