@@ -3,6 +3,8 @@
 Pingdom now offers a RESTful API, which gives us no reason not to make a decent,
 non-SOAP API client for their services.
 
+NOTE: This is a 3rd party gem and not an official product from Pingdom.
+
 ## Usage
 
     client = Pingdom::Client.new :username => u, :password => p
