@@ -3,7 +3,8 @@ module Pingdom
   # {"name"=>"Autocomplete", "id"=>259103, "type"=>"http", "lastresponsetime"=>203173, "status"=>"up", "lasttesttime"=>1298102416}
   class Check < Base
     def self.parse(client, response)
-      super[:checks].map do |check|
+      checks = super
+      Array.wrap(checks[:checks] || checks[:check]).map do |check|
         new(client, response, check)
       end
     end
