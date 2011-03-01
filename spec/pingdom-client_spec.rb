@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Pingdom::Client do
-  let(:client){ Pingdom::Client.new(CREDENTIALS) }
+  let(:client){ Pingdom::Client.new(CREDENTIALS.merge(:logger => LOGGER)) }
   
   describe "#test!" do
     it "should test a single endpoint" do

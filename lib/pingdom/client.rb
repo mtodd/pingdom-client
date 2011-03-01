@@ -5,11 +5,12 @@ module Pingdom
     
     attr_accessor :limit
     
-    def initialize(credentials = {})
+    def initialize(options = {})
+      @options = options.with_indifferent_access
       @connection = Faraday::Connection.new(:url => "https://api/pingdom.com/api/2.0/") do |builder|
         builder.url_prefix = "https://api.pingdom.com/api/2.0"
         
-        builder.adapter :logger
+        builder.adapter :logger, @options[:logger]
         
         builder.adapter :excon
         
@@ -17,7 +18,7 @@ module Pingdom
         builder.response :yajl
         builder.use Tinder::FaradayResponse::WithIndifferentAccess
         
-        builder.basic_auth credentials[:username], credentials[:password]
+        builder.basic_auth @options[:username], @options[:password]
       end
     end
     
