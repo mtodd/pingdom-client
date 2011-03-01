@@ -1,6 +1,6 @@
 module Pingdom
   
-  VERSION = '0.0.1.alpha'
+  VERSION = '0.0.2.alpha'
   
   class Error < RuntimeError
   end

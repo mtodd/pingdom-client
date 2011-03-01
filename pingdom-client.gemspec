@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{pingdom-client}
-  s.version = "0.0.1.alpha"
+  s.version = "0.0.2.alpha"
   
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
@@ -11,7 +11,19 @@ Gem::Specification.new do |s|
     "pingdom-client.gemspec",
     "Gemfile",
     "Gemfile.lock",
+    "lib/pingdom/base.rb",
+    "lib/pingdom/check.rb",
+    "lib/pingdom/client.rb",
+    "lib/pingdom/contact.rb",
+    "lib/pingdom/probe.rb",
+    "lib/pingdom/result.rb",
+    "lib/pingdom/summary/average.rb",
+    "lib/pingdom/summary/outage.rb",
+    "lib/pingdom/summary/performance.rb",
+    "lib/pingdom/summary.rb",
     "lib/pingdom-client.rb",
+    "lib/pingdom.rb",
+    "lib/tinder/faraday_response.rb",
     "Rakefile",
     "Readme.md",
     "spec/pingdom-client_spec.rb",
@@ -32,7 +44,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
     
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency("faraday",       ["~> 0.5.6"])
+      s.add_runtime_dependency("faraday",       ["~> 0.5.7"])
       s.add_runtime_dependency("excon",         ["~> 0.5.6"])
       s.add_runtime_dependency("yajl-ruby",     ["~> 0.8.1"])
       s.add_runtime_dependency("activesupport", ["~> 3.0.4"])
@@ -42,7 +54,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency("rake",    ["~> 0.8.7"])
       s.add_development_dependency("rspec",   ["= 2.1.0"])
     else
-      s.add_dependency("faraday",       ["~> 0.5.6"])
+      s.add_dependency("faraday",       ["~> 0.5.7"])
       s.add_dependency("excon",         ["~> 0.5.6"])
       s.add_dependency("yajl-ruby",     ["~> 0.8.1"])
       s.add_dependency("activesupport", ["~> 3.0.4"])
@@ -53,7 +65,7 @@ Gem::Specification.new do |s|
       s.add_dependency("rspec",   ["= 2.1.0"])
     end
   else
-    s.add_dependency("faraday",       ["~> 0.5.6"])
+    s.add_dependency("faraday",       ["~> 0.5.7"])
     s.add_dependency("excon",         ["~> 0.5.6"])
     s.add_dependency("yajl-ruby",     ["~> 0.8.1"])
     s.add_dependency("activesupport", ["~> 3.0.4"])
