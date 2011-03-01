@@ -294,7 +294,8 @@ module Pingdom
         sum = Summary.new(client, response, sum)
       end
       
-      attributes :probeid => :probe_id
+      attributes  :probeid      => :probe_id,
+                  :responsetime => :response_time
       
       def probe
         @client.probes.detect{ |probe| probe.id == probe_id }
