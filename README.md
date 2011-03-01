@@ -7,20 +7,23 @@ non-SOAP API client for their services.
 
     client = Pingdom::Client.new :username => u, :password => p
     check = client.checks.first #=> #<Pingdom::Check>
-    check.lastresponsetime      #=> 200 (ms)
+    check.last_response_time    #=> 200 (ms)
     check.status                #=> :up
     check.up?                   #=> true
-
+    
     result = check.results.first(:probes => [1,2,3], :status => [:up, :down])
                                 #=> #<Pingdom::Result>
     result.status               #=> :up
     result.up?                  #=> true
-    result.responsetime         #=> 200 (ms)
+    result.response_time        #=> 20000 (microsecs)
     
     avg = check.average(:from   => 1.month.ago,
                         :probes => [1,2,3])
                                 #=> #<Pingdom::Summary::Average>
-    avg.responsetime.avgresponse
+    avg.response_time           #=> 200 (ms)
+    probe_avg = avg.averages.first
+    probe_avg.response_time     #=> 120 (ms)
+    probe_avg.probe.name        #=> "Atlanta, GA"
 
 ## License
 
