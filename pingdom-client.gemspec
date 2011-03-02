@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
-  s.date = %q{2011-03-01}
+  s.date = %q{2011-03-02}
   s.description = %q{Pingdom Ruby Client}
   s.email = %q{chiology@gmail.com}
   s.files = [
