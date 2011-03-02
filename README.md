@@ -27,6 +27,10 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
     probe_avg.response_time     #=> 120 (ms)
     probe_avg.probe.name        #=> "Atlanta, GA"
 
+## Contributors
+
+* Emily Price ([duien](http://github.com/duien))
+
 ## License
 
 The MIT License
