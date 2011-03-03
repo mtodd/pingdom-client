@@ -6,13 +6,13 @@ module Pingdom
     attr_accessor :limit
     
     def initialize(options = {})
-      @options = options.with_indifferent_access
+      @options = options.with_indifferent_access.reverse_merge(:http_driver => :excon)
       @connection = Faraday::Connection.new(:url => "https://api/pingdom.com/api/2.0/") do |builder|
         builder.url_prefix = "https://api.pingdom.com/api/2.0"
         
         builder.adapter :logger, @options[:logger]
         
-        builder.adapter :excon
+        builder.adapter @options[:http_driver]
         
         # builder.use Gzip # TODO: write GZip response handler, add Accept-Encoding: gzip header
         builder.response :yajl
