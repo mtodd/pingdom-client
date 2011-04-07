@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{pingdom-client}
-  s.version = "0.0.5.alpha"
+  s.version = "0.0.6.alpha"
   
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
