@@ -7,6 +7,9 @@ module Pingdom
     
     def initialize(options = {})
       @options = options.with_indifferent_access.reverse_merge(:http_driver => :excon)
+      
+      raise ArgumentError, "an application key must be provided (as :key)" unless @options.key?(:key)
+      
       @connection = Faraday::Connection.new(:url => "https://api/pingdom.com/api/2.0/") do |builder|
         builder.url_prefix = "https://api.pingdom.com/api/2.0"
         
@@ -33,7 +36,7 @@ module Pingdom
     end
     
     def get(uri, params = {}, &block)
-      response = @connection.get(@connection.build_url(uri, prepare_params(params)), &block)
+      response = @connection.get(@connection.build_url(uri, prepare_params(params)), "App-Key" => @options[:key], &block)
       update_limits!(response.headers['req-limit-short'], response.headers['req-limit-long'])
       response
     end
