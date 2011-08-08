@@ -17,8 +17,8 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
     result.status               #=> :up
     result.up?                  #=> true
     result.response_time        #=> 20000 (microsecs)
-    
-    avg = check.average(:from   => 1.month.ago,
+
+    avg = check.summary.average(:from   => 1.month.ago,
                         :probes => [1,2,3])
                                 #=> #<Pingdom::Summary::Average>
     avg.response_time           #=> 200 (ms)
