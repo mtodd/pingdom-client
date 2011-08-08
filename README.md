@@ -10,7 +10,8 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
     client = Pingdom::Client.new :username => u, :password => p, :key => k
     check = client.checks.first #=> #<Pingdom::Check>
     check.last_response_time    #=> 200 (ms)
-    check.status                #=> :up
+    check.status                #=> "up"
+
     result = check.results.first(:probes => [1,2,3], :status => [:up, :down])
                                 #=> #<Pingdom::Result>
     result.status               #=> :up
