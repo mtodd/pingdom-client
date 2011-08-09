@@ -7,20 +7,19 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
 
 ## Usage
 
-    client = Pingdom::Client.new :username => u, :password => p
+    client = Pingdom::Client.new :username => u, :password => p, :key => k
     check = client.checks.first #=> #<Pingdom::Check>
     check.last_response_time    #=> 200 (ms)
-    check.status                #=> :up
-    check.up?                   #=> true
-    
+    check.status                #=> "up"
+
     result = check.results.first(:probes => [1,2,3], :status => [:up, :down])
                                 #=> #<Pingdom::Result>
     result.status               #=> :up
     result.up?                  #=> true
     result.response_time        #=> 20000 (microsecs)
-    
-    avg = check.average(:from   => 1.month.ago,
-                        :probes => [1,2,3])
+
+    avg = check.summary.average(:from   => 1.month.ago,
+                                :probes => [1,2,3])
                                 #=> #<Pingdom::Summary::Average>
     avg.response_time           #=> 200 (ms)
     probe_avg = avg.averages.first
