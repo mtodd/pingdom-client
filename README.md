@@ -19,7 +19,7 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
     result.response_time        #=> 20000 (microsecs)
 
     avg = check.summary.average(:from   => 1.month.ago,
-                        :probes => [1,2,3])
+                                :probes => [1,2,3])
                                 #=> #<Pingdom::Summary::Average>
     avg.response_time           #=> 200 (ms)
     probe_avg = avg.averages.first
