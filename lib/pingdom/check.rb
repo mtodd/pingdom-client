@@ -21,11 +21,11 @@ module Pingdom
       @client.summary(id)
     end
     
-    def lasttesttime
+    def self.lasttesttime
       Time.at(super)
     end
     
-    def lasterrortime
+    def self.lasterrortime
       Time.at(super)
     end
     
