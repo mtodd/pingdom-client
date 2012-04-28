@@ -17,6 +17,10 @@ module Pingdom
       @client.results(id, options)
     end
     
+    def paused(bool)
+      @client.paused(id, bool)
+    end
+
     def summary
       @client.summary(id)
     end

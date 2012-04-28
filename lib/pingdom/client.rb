@@ -41,6 +41,12 @@ module Pingdom
       response
     end
     
+    def put(uri, params = {}, data, &block)
+      response = @connection.put(@connection.build_url(uri, prepare_params(params)), data, "App-Key" => @options[:key], &block)
+      update_limits!(response.headers['req-limit-short'], response.headers['req-limit-long'])
+      response
+    end
+
     def update_limits!(short, long)
       @limit ||= {}
       @limit[:short]  = parse_limit(short)
@@ -63,6 +69,7 @@ module Pingdom
     def checks(options = {})
       Check.parse(self, get("checks", options))
     end
+
     def check(id)
       Check.parse(self, get("checks/#{id}")).first
     end
@@ -73,6 +80,10 @@ module Pingdom
       Result.parse(self, get("results/#{id}", options))
     end
     
+    def paused(id, bool)
+      Check.parse(self, put("checks/#{id}", {'paused'=>bool.to_s}))
+    end
+
     def probes(options = {})
       Probe.parse(self, get("probes", options))
     end
