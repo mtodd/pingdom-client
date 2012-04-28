@@ -12,6 +12,9 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
     check.last_response_time    #=> 200 (ms)
     check.status                #=> "up"
 
+    check.paused(true)
+    check.status                #=> "paused"
+
     result = check.results.first(:probes => [1,2,3], :status => [:up, :down])
                                 #=> #<Pingdom::Result>
     result.status               #=> :up
