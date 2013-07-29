@@ -85,5 +85,9 @@ module Pingdom
       Summary.proxy(self, id)
     end
     
+    def analysis(id)
+      Analysis.parse(self,get("analysis/#{id}"))
+    end
+    
   end
 end
