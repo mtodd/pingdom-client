@@ -89,5 +89,8 @@ module Pingdom
       Analysis.parse(self,get("analysis/#{id}"))
     end
     
+    def rca(check_id, analysis_id)
+      RCA.parse(self,get("analysis/#{check_id}/#{analysis_id}"))
+    end
   end
 end
