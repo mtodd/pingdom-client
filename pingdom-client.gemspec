@@ -44,7 +44,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
     
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency("faraday",       ["~> 0.5.7"])
+      s.add_runtime_dependency("faraday",       ["~> 0.8.5"])
       s.add_runtime_dependency("excon",         ["~> 0.5.6"])
       s.add_runtime_dependency("yajl-ruby",     ["~> 0.8.1"])
       s.add_runtime_dependency("activesupport", ["~> 3.0.4"])
@@ -54,7 +54,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency("rake",    ["~> 0.8.7"])
       s.add_development_dependency("rspec",   ["= 2.1.0"])
     else
-      s.add_dependency("faraday",       ["~> 0.5.7"])
+      s.add_dependency("faraday",       ["~> 0.8.5"])
       s.add_dependency("excon",         ["~> 0.5.6"])
       s.add_dependency("yajl-ruby",     ["~> 0.8.1"])
       s.add_dependency("activesupport", ["~> 3.0.4"])
@@ -65,7 +65,7 @@ Gem::Specification.new do |s|
       s.add_dependency("rspec",   ["= 2.1.0"])
     end
   else
-    s.add_dependency("faraday",       ["~> 0.5.7"])
+    s.add_dependency("faraday",       ["~> 0.8.5"])
     s.add_dependency("excon",         ["~> 0.5.6"])
     s.add_dependency("yajl-ruby",     ["~> 0.8.1"])
     s.add_dependency("activesupport", ["~> 3.0.4"])
