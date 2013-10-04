@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
     
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency("faraday",       ["~> 0.8.8"])
-      s.add_runtime_dependency("excon",         ["~> 0.26.0"])
+      s.add_runtime_dependency("excon",         ["~> 0.25"])
       s.add_runtime_dependency("yajl-ruby",     ["~> 0.8.1"])
       s.add_runtime_dependency("activesupport", ["~> 3.0.4"])
       s.add_runtime_dependency("i18n",          ["~> 0.5.0"])
