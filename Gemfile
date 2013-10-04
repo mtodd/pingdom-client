@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem "faraday", '~> 0.8.8'
 
-gem "excon", '~> 0.26.0'
+gem "excon"
 gem "yajl-ruby", "~> 0.8.1", :require => "yajl"
 
 gem "activesupport", "~> 3.0.4"
