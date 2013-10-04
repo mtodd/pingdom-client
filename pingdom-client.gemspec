@@ -2,7 +2,6 @@ Gem::Specification.new do |s|
   s.name = %q{pingdom-client}
   s.version = "0.0.7"
   
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Todd"]
   s.date = %q{2011-03-02}
   s.description = %q{Pingdom Ruby Client}
@@ -29,7 +28,6 @@ Gem::Specification.new do |s|
     "spec/pingdom-client_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/mtodd/pingdom-client}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
