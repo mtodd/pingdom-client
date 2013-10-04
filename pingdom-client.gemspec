@@ -54,7 +54,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency("rspec",   ["= 2.1.0"])
     else
       s.add_dependency("faraday",       ["~> 0.5.7"])
-      s.add_dependency("excon",         ["~> 0.5.6"])
       s.add_dependency("yajl-ruby",     ["~> 0.8.1"])
       s.add_dependency("activesupport", ["~> 3.0.4"])
       s.add_dependency("i18n",          ["~> 0.5.0"])
@@ -65,7 +64,6 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency("faraday",       ["~> 0.5.7"])
-    s.add_dependency("excon",         ["~> 0.5.6"])
     s.add_dependency("yajl-ruby",     ["~> 0.8.1"])
     s.add_dependency("activesupport", ["~> 3.0.4"])
     s.add_dependency("i18n",          ["~> 0.5.0"])
