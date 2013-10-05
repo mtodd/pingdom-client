@@ -15,7 +15,7 @@ RSpec::Core::RakeTask.new do |t|
 end
 
 task :console do
-  exec %(ruby -rirb -rubygems -r bundler/setup -r lib/pingdom-client -e '$credentials = YAML.load_file("credentials.yml").with_indifferent_access; $client = Pingdom::Client.new($credentials); IRB.start')
+  exec %(ruby -rirb -rubygems -r bundler/setup -r lib/pingdom-ruby -e '$credentials = YAML.load_file("credentials.yml").with_indifferent_access; $client = Pingdom::Client.new($credentials); IRB.start')
 end
 
 task :default => :spec

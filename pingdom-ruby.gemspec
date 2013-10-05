@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = %q{pingdom-client}
+  s.name = %q{pingdom-ruby}
   s.version = "1.0.0"
   
   s.authors = ["Jason Straughan"]
@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description = %q{Pingdom Ruby Client}
   s.email = %q{jasons@grok-interactive.com}
   s.files = [
-    "pingdom-client.gemspec",
+    "pingdom-ruby.gemspec",
     "Gemfile",
     "Gemfile.lock",
     "lib/pingdom/base.rb",
@@ -20,12 +20,12 @@ Gem::Specification.new do |s|
     "lib/pingdom/summary/outage.rb",
     "lib/pingdom/summary/performance.rb",
     "lib/pingdom/summary.rb",
-    "lib/pingdom-client.rb",
+    "lib/pingdom-ruby.rb",
     "lib/pingdom.rb",
     "lib/tinder/faraday_response.rb",
     "Rakefile",
     "Readme.md",
-    "spec/pingdom-client_spec.rb",
+    "spec/pingdom-ruby_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.licenses = ["MIT"]
@@ -34,6 +34,6 @@ Gem::Specification.new do |s|
   s.summary = %q{Pingdom Ruby Client}
   s.test_files = [
     "spec/spec_helper.rb",
-    "spec/pingdom-client_spec.rb"
+    "spec/pingdom-ruby_spec.rb"
   ]
 end

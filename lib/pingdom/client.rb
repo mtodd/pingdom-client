@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'pingdom-client') unless defined? Pingdom
+require File.join(File.dirname(__FILE__), '..', 'pingdom-ruby') unless defined? Pingdom
 
 module Pingdom
   class Client
