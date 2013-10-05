@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name = %q{pingdom-client}
-  s.version = "0.0.7"
+  s.version = "1.0.0"
   
-  s.authors = ["Matt Todd"]
-  s.date = %q{2011-03-02}
+  s.authors = ["Jason Straughan"]
+  s.date = %q{2013-10-05}
   s.description = %q{Pingdom Ruby Client}
-  s.email = %q{chiology@gmail.com}
+  s.email = %q{jasons@grok-interactive.com}
   s.files = [
     "pingdom-client.gemspec",
     "Gemfile",
