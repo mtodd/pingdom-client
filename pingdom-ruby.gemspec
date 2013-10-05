@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{pingdom-ruby}
-  s.version = "1.0.0"
+  s.version = "1.0.3"
   
   s.authors = ["Jason Straughan"]
   s.date = %q{2013-10-05}
