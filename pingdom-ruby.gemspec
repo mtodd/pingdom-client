@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{pingdom-ruby}
-  s.version = "1.0.3"
+  s.version = "1.0.4"
   
   s.authors = ["Jason Straughan"]
   s.date = %q{2013-10-05}
@@ -36,4 +36,5 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "spec/pingdom-ruby_spec.rb"
   ]
+  s.requirements << 'faraday, v0.5.7'
 end
