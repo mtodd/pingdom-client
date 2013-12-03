@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = %q{pingdom-ruby}
   s.version = "1.0.4"
-  
+
   s.authors = ["Jason Straughan"]
   s.date = %q{2013-10-05}
   s.description = %q{Pingdom Ruby Client}
@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
     "lib/pingdom/contact.rb",
     "lib/pingdom/probe.rb",
     "lib/pingdom/result.rb",
+    "lib/pingdom/rca.rb",
+    "lib/pingdom/analysis.rb",
     "lib/pingdom/summary/average.rb",
     "lib/pingdom/summary/outage.rb",
     "lib/pingdom/summary/performance.rb",
