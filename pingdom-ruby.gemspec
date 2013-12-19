@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
     "lib/pingdom.rb",
     "lib/tinder/faraday_response.rb",
     "Rakefile",
-    "Readme.md",
+    "README.md",
     "spec/pingdom-ruby_spec.rb",
     "spec/spec_helper.rb"
   ]
