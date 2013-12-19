@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'pingdom-client') unless defined? Pingdom
+require File.join(File.dirname(__FILE__), '..', 'pingdom-ruby') unless defined? Pingdom
 
 module Pingdom
   class Client
@@ -41,6 +41,24 @@ module Pingdom
       response
     end
     
+    def put(uri, params = {}, data, &block)
+      response = @connection.put(@connection.build_url(uri, prepare_params(params)), data, "App-Key" => @options[:key], &block)
+      update_limits!(response.headers['req-limit-short'], response.headers['req-limit-long'])
+      response
+    end
+
+    def post(uri, params = {}, data, &block)
+      response = @connection.post(@connection.build_url(uri, prepare_params(params)), data, "App-Key" => @options[:key], &block)
+      update_limits!(response.headers['req-limit-short'], response.headers['req-limit-long'])
+      response
+    end
+
+    def delete(uri, &block)
+      response = @connection.delete(@connection.build_url(uri), "App-Key" => @options[:key], &block)
+      update_limits!(response.headers['req-limit-short'], response.headers['req-limit-long'])
+      response
+    end
+
     def update_limits!(short, long)
       @limit ||= {}
       @limit[:short]  = parse_limit(short)
@@ -85,5 +103,12 @@ module Pingdom
       Summary.proxy(self, id)
     end
     
+    def analysis(id,  options = {})
+      Analysis.parse(self,get("analysis/#{id}", options))
+    end
+    
+    def rca(check_id, analysis_id)
+      RCA.parse(self,get("analysis/#{check_id}/#{analysis_id}"))
+    end
   end
 end

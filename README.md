@@ -1,7 +1,6 @@
 # Pingdom RESTful API Client
 
-Pingdom now offers a RESTful API, which gives us no reason not to make a decent,
-non-SOAP API client for their services.
+Pingdom RESTful API wrapper for Ruby.
 
 NOTE: This is a 3rd party gem and not an official product from Pingdom.
 
@@ -28,13 +27,15 @@ NOTE: This is a 3rd party gem and not an official product from Pingdom.
 
 ## Contributors
 
+* Updated for Ruby 1.9.x/2.0.0 by Jason Straughan ([jdstraughan](http://github.com/jdstraughan))
 * Emily Price ([duien](http://github.com/duien))
+* Based on [pingom-client](https://github.com/mtodd/pingdom-client) by [Matt Todd](https://github.com/mtodd)
 
 ## License
 
 The MIT License
 
-Copyright (c) 2011 Matt Todd.
+Copyright (c) 2013 Jason Straughan.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
