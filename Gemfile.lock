@@ -1,7 +1,8 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.0.4)
+    activesupport (3.1.12)
+      multi_json (~> 1.0)
     addressable (2.2.4)
     diff-lcs (1.1.2)
     excon (0.5.6)
@@ -10,6 +11,7 @@ GEM
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
     i18n (0.5.0)
+    multi_json (1.14.1)
     multipart-post (1.1.0)
     rack (1.2.1)
     rake (0.8.7)
@@ -27,7 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 3.0.4)
+  activesupport (~> 3.1.12)
   bundler (~> 1.0.0)
   excon (~> 0.5.6)
   faraday (~> 0.5.7)
