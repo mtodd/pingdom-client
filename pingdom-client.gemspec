@@ -51,7 +51,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency("i18n",          ["~> 0.5.0"])
       
       s.add_development_dependency("bundler", ["~> 1.0.0"])
-      s.add_development_dependency("rake",    ["~> 0.8.7"])
+      s.add_development_dependency("rake",    "~> 12.3.3")
       s.add_development_dependency("rspec",   ["= 2.1.0"])
     else
       s.add_dependency("faraday",       ["~> 0.5.7"])
@@ -61,7 +61,7 @@ Gem::Specification.new do |s|
       s.add_dependency("i18n",          ["~> 0.5.0"])
       
       s.add_dependency("bundler", ["~> 1.0.0"])
-      s.add_dependency("rake",    ["~> 0.8.7"])
+      s.add_dependency("rake",    "~> 12.3.3")
       s.add_dependency("rspec",   ["= 2.1.0"])
     end
   else
@@ -72,7 +72,7 @@ Gem::Specification.new do |s|
     s.add_dependency("i18n",          ["~> 0.5.0"])
     
     s.add_dependency("bundler", ["~> 1.0.0"])
-    s.add_dependency("rake", ["~> 0.8.7"])
+    s.add_dependency("rake", "~> 12.3.3")
     s.add_dependency("rspec", ["= 2.1.0"])
   end
 end

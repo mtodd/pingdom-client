@@ -10,6 +10,6 @@ gem "i18n", "~> 0.5.0" # ActiveSupport dependency
 
 group :development do
   gem "bundler", "~> 1.0.0"
-  gem "rake", "~> 0.8.7"
+  gem "rake", "~> 12.3.3"
   gem "rspec", "2.1.0"
 end
